@@ -19,6 +19,116 @@
 	p {
 		color: #f00;
 	}
+
+	Selectores básicos:
+	1. Por Etiqueta: Se escribe unicamente el nombre de la etiqueta 
+		p {
+			font-family: arial;
+			font-size: 14px;
+			color: #f00;
+		}
+
+	2.Por Clase: Se escribe "." seguido del valor del atributo class
+		(Recomendado porque se pueden reutilizar)
+		.container {
+			max-width: 1200pz;
+			margin: 0 auto; 
+		}
+	
+	3.Por id: Se escribe "#" seguido del valor del atributo "id"
+		(No recomendado porque no se puede reutilizar las reglas css)
+		#linkGoogle {
+			color: #ff0;
+			text.decoration: none;
+		}
+	
+	Selectores descendientes: Se utilizan cuando necesitamos diseñar o estilizar algún elemento 
+	que se encuentra dentro de otro. Los selectores se escriben separados por un espacio. 
+	
+		main section p a {
+			color: f00;
+		}
+	
+		.contact ul li a{
+			text-decoration: none;
+		}
+
+	CSS: Modelo de cajas (Model Box): Se refiere a que css considera a todos los elementos
+	HTML como "cajas". 
+	Las propiedades del modelo de cajas se pueden aplicar a cualquier elemento HTML y 
+	estas no se heredan.  
+		
+		- width: (number)
+			width: 200px;
+
+		- height: (number)
+			height:200px;
+
+		- border: (border-width border-style border-color)
+
+			(4 lados)
+			border:1px solid #ccc;
+
+			border-width: 1px;
+			border-style: solid;
+			border-color: #ccc;
+
+			(1 lado)
+			border-[lado]: 1px solid #ccc;
+			lado: left, right, bottom, top
+
+			border-left-width: 1px;
+			border-left-style: solid;
+			border-left-color: #ccc;
+
+		- background: (background-color background-image backgound-repeat background-position background-attchment)
+			background: #f00 url("../images/img1.jpg") no-repeat center center fixed; (es recomendable usar la propiedad general)
+
+			background-color: #f00; (default: transparent)
+			background-image: url("../images(img1.jpg)");
+			background-repeat: no-repeat / repeat; (default: repeat)
+			background-position: posX posY (default: left top)
+				posX= left, center, right, [number] 300px
+				posY= top, center, bottom, [number] 300px  
+			background-attachment: scroll / fixed (default: scroll)
+
+			background-color: #f00; 
+			background-image: url("../images(img1.jpg)");
+			background-repeat: no-repeat;
+			background-position: center center; 
+			background-attachment: fixed;
+
+		- margin:
+			margin: 10px; 
+				(1 valor aplica a los 4 lados)
+
+			margin: 10px 20px; 
+				(2 valores, 1er valor top/bottom, 2do valor left/right)
+
+			margin: 10px 20px 30px; 
+				(3 valores, 1er valor top, 2do valor left/right, 3er valor bottom)
+
+			margin: 10px 20px 30px 40px;
+				(4 valores, empezando con top y en dirección a manecillas del reloj)
+				1er valor top
+				2do valor right
+				3er valor bottom
+				4to valor left 
+
+			margin-left: 10px;
+			margin-right: 10px;
+			margin-top: 100px;
+			margin-bottom: 200px;
+
+			margin: 100px 10px 200px;
+			
+		- padding: Igual que margin 
+			padding-left: 10px;
+			padding-right: 10px;
+			padding-top: 100px;
+			padding-bottom: 200px;
+			
+			padding: 100px 10px 200px;
 */
 .container {
 	max-width: 1200px;
@@ -27,4 +137,105 @@
 	automático a la izquierda y a la derecha.
 */
 	margin: 0 auto;
+}
+
+.page-header {
+	padding: 25px 25px 250px; /*arriba izq,dere arriba,abajo */
+	background: url("../images/header.jpg") no-repeat center center;
+	
+}
+
+.page-header h1 {
+	margin: 0;
+	color: #fff;
+	font-family: arial;
+	font-size: 30px;
+	font-weight: normal;
+	text-transform: uppercase; 
+	text-shadow: 1px 1px 5px #000; /*(posx posy blur color) */
+	
+/*
+	El texto se pone en mayusculas en css ya que en html no se debe escribir asi a menso que 
+	sea necesario. 
+*/
+}
+
+.page-nav {
+	background-color:#555;
+}
+
+.page-nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.page-nav li {
+	display: inline-block;
+}  
+
+.page-nav a {
+	display: block;
+	background-color: #555;
+	padding: 10px 20px;
+	font-family: arial;
+	font-size: 14px;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: #ccc;
+}
+
+.page-nav a:hover {
+	background-color: #444;
+	color: #fff;
+}
+
+.page-main {
+	font-family: arial;
+	font_size: 15px;
+	line-height: 1.8; /*(default 1.2)*/
+	padding: 65px 0;
+}
+
+.page-main h2 {
+	font-size: 28px;
+	font-weight: normal;
+	text-transform: uppercase;
+	color:#910330;
+}
+
+.page-main img {
+	max-width: 300px;
+	border: 8px solid #fff;
+	box-shadow: 0 0 10px #999; /*(posX posY blur color)*/
+}
+
+.page-footer {
+	background-color: #555;
+	padding: 20px 0;
+	text-align: center;
+}
+
+.page-footer p {
+	margin: 0;
+	font-size: 14px;
+	color: #ccc;
+	font-family: arial;
+}
+
+.actions {
+	text-align: center;
+}
+
+.actions .go-top {
+	display: inline-block;
+	background-color: #555;
+	padding: 10px 20px;
+	color: #ccc;
+	text-decoration: none;
+}
+
+.actions .go-top:hover {
+	background-color: #444;
+	color: #fff;
 }
