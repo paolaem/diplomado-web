@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Posicionamiento Relativo</title>
+    <style>
+        /*
+            position relative:
+                - El elemento NO sale del flujo normal de renderización, por lo cual
+                    los elementos que están por debajo de él, siempre reconocen su posición.
+                - A éste elemento le podemos especificar coordenadas utilizando las propiedades:
+                    - left
+                    - rigth
+                    - top
+                    - bottom
+                - Si a un elemento lo posicionamos de manera relativa pero no especificamos coordenadas,
+                    dicho elemento queda ubicado en su posición original.
+                - Si especificamos coordenadas, el elemento tomará como referencia su posición original.
+        */
+
+        .abuelo {
+            width: 700px;
+            height: 700px;
+            background-color: #666;
+        }
+        .padre {
+            width: 500px;
+            height: 500px;
+            background-color: #999;
+        }
+        .hijo {
+            width: 100px;
+            height: 100px;
+        }
+        .hijo-1 {
+            background-color: #f00;
+        }
+        .hijo-2 {
+            background-color: #0f0;
+        }
+        .hijo-3 {
+            background-color: #00f;
+            position: relative;
+            top: 25px;
+            left: 25px;
+        }
+        .hijo-4 {
+            background-color: #ff0;
+        }
+        .hijo-5 {
+            background-color: #f0f;
+        }
+    </style>
+</head>
+<body>
+    <div class="abuelo">
+        <div class="padre">
+            <div class="hijo hijo-1"></div>
+            <div class="hijo hijo-2"></div>
+            <div class="hijo hijo-3"></div>
+            <div class="hijo hijo-4"></div>
+            <div class="hijo hijo-5"></div>
+        </div>
+    </div>
+</body>
+</html>
