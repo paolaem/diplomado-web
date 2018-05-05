@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 /* Fonts */
+@import url("lib/fontawesome-all.min.css");
+@import url("lib/font-pao.css");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i");
 
 /* General */
@@ -14,6 +16,7 @@ body {
     margin: 0 auto;
 }
 img {
+    display: block; /*no se vera un espacio entre la imagen del header y la barra de nav*/
     max-width: 100%;
 }
 
@@ -22,6 +25,7 @@ ul, ol {
     padding: 0;
     list-style-type: none;
 }
+
 /* Header */
 .page-header {
     position: relative;
@@ -38,9 +42,99 @@ ul, ol {
     text-shadow: 0 0 8px #fff;
 }
 /* Nav */
+.page-nav {
+    background-color: #333;
+    /*position: relative;*/
+}
 
+.page-nav li {
+    float: left;
+}
+
+.page-nav a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    padding: 10px 20px;
+    transition: all .3s;
+    /*
+        Transition: Recive una lista de propiedades a transicionar. Es a todos los 
+        elementos con valor numérico.
+         Cada propiedad de la lista debe tener especificado el tiempo de transición,
+         el cual puede ser en segundos (s) o milisegundos (ms). Lo ideal son 300ms
+            
+            sintaxis: 
+            transition: [Propiedad tiempo], ...;
+            transition: background-color 300ms;
+            transition: background-color .3s;
+            transition: background-colo .3s, color .5s;
+            transition: all .3s; (transiciona todas las porpiedades que se puedan transicionar)
+    */
+}
+
+.page-nav a:hover {
+    background-color: #666;
+    color: #fff;
+}
+
+.page-nav .fa-search {
+    color: #ccc;
+    float: right;
+    margin: 10px 20px 0;
+    /*position: absolute;
+    top: 10px;
+    right: 20px;*/
+    cursor: pointer;
+}
 /* Main */
+.page-main {
+    padding: 65px 0;                              
+}
 
+.page-main h2:first-child {
+    margin-top: 0;
+}
+
+/* Grid*/
+.grid .col-left {
+    float: left;
+    width: 33.33%;
+}
+.grid .col-right {
+    float: right;
+    width: 66.66%;
+    padding-left: 16px;
+    box-sizing: border-box;
+    /* 
+    
+    box-sizing: valor por defecto "content-box".
+        content-box: Ancho del contenido es únicamnete el contendio, 
+            es decir, que los valores de "margin" "padding" y "border" se 
+            sumarán. 
+
+        border-box:Ancho del contenido es la suma de "contenido" + "padding" + "border"
+            es decir, que los valores de "padding" y "border" se toman del ancho establecido.
+    
+    */
+}
 /* Footer */
+.page-footer {
+    background-color: #333;
+    padding: 16px 0;
+}
 
+.page-footer p {
+    margin:0;
+    text-align: center;
+    color: #ccc;
+}
 /* Helpers */
+.clearfix:before,
+.clearfix:after {
+    content:"";
+    display: block;
+}
+
+.clearfix:after {
+    clear: both; /* [both, left, right] lo recomendable es siempre usar both*/
+}
