@@ -35,7 +35,7 @@ ul, ol {
     left: 25px;
     font-weight: 700;
     font-size: 30px;
-    text-shadow: 10px 10px 30px #fff;
+    text-shadow: 10px 10px 30px rgb(255, 255, 255);
     color: maroon;
 }
 
