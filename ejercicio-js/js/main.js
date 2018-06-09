@@ -47,7 +47,48 @@ $(function () {
          % -> Resto 
          ++ -> Incremento 
          -- -> Decremento
+        
+    3. Operadores relacionales: Siempre van a devolver un valor booleano (BOOLEAN)
+        > Mayor que 
+        < Menor que 
+        == Igual a 
+        === Exáctamente igual a 
+        >= Mayor o igual que 
+        <= Menor o igual que 
+        != Diferente a
+        !== Exáctamente diferente a
+        
+    4. Operadores lógicos: Siempre van a devolver un valor booleano (BOOLEAN)
+        && AND
+            true && true    -> true 
+            true && false   -> false
+            false && true   -> false
+            false && false  -> false
 
+        || OR (alt + 1 para sacar las barras)
+            true || true    -> true
+            true || false   -> true
+            false || ture   -> true 
+            false || false  -> false 
+
+    5. Estructura de control is "if else"
+        sintaxis:
+
+            if (condicional) {
+                La condicional debe ser un valor booleano  (BOOLEAN)
+                Si la condicional es igual "ture" entonces se ejecuta el
+                código que esté dentro de estas llaves. 
+            } else {
+                Si la condicional es igual a "false" entonces se ejecuta 
+                el código que esté dentro de estas llaves.
+            }
+
+    6. Operador "for"
+        Sintaxis: 
+
+            for (var i = 0; i < 10; i++) {
+                Código que se ejecuta en cada iteración.
+            }
    */
 
    // STRING 
@@ -105,7 +146,7 @@ $(function () {
     
     //ARRAY
     var diasSemana = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
-    var numeroDiasSemana = diasSemana.length;
+    var numeroDiasSemana = diasSemana.length; // El punto lentght devolvera el numero de elementos que tiene el arreglo. 
     var position = 4;
         //console.log(diasSemana);
         //console.log(numeroDiasSemana);
@@ -170,20 +211,20 @@ $(function () {
     var areas = $('#areas');
     //areas.append(triangulo1, triangulo2, triangulo3, triangulo4, triangulo5);
 
-    var ul = document.createElement('ul');
-    var li1 = document.createElement('li');
-    var li2 = document.createElement('li');
-    var li3 = document.createElement('li');
-    var li4 = document.createElement('li');
-    var li5 = document.createElement('li');
+    // var ul = document.createElement('ul');
+    // var li1 = document.createElement('li');
+    // var li2 = document.createElement('li');
+    // var li3 = document.createElement('li');
+    // var li4 = document.createElement('li');
+    // var li5 = document.createElement('li');
 
-    $(li1).append(triangulo1);
-    $(li2).append(triangulo2);
-    $(li3).append(triangulo3);
-    $(li4).append(triangulo4);
-    $(li5).append(triangulo5);
-    $(ul).append(li1, li2, li3, li4, li5);
-    areas.append(ul);
+    // $(li1).append(triangulo1);
+    // $(li2).append(triangulo2);
+    // $(li3).append(triangulo3);
+    // $(li4).append(triangulo4);
+    // $(li5).append(triangulo5);
+    // $(ul).append(li1, li2, li3, li4, li5);
+    // areas.append(ul);
 
     //OBJECT
     var persona = {
@@ -221,5 +262,173 @@ $(function () {
     // console.log(persona.pets[1].name);
 
     // persona.printFullName();
+
+    //OPERADORES RELACIONALES
+    var numero5 = 10;
+    var numero6 = 20;
+    var numero7 = 6;
+    var numero8 = 4;
+    var texto8 = '4';
+    var resultado = numero5 < numero6;
+    var resultado2 = numero6 != (numero5 + numero7 + numero8);
+        //console.log(resultado);
+        //console.log(resultado2);
+    var resultado3 = numero8 == texto8; 
+    var resultado4 = numero8 === texto8;  
+        //console.log('Igual a: ', resultado3); mostrará TRUE ya que que no importa el tipo de valor solo el result.
+        //console.log('Exáctamente igual a: ', resultado4); mostrará FALSE ya que uno es texto y el otro es numero.
     
+    //OPERADORES LÓGICOS
+    var isMexican = true;
+    var isHappy = false;
+
+    var isAcceptInFrance = isMexican && isHappy;
+    var isAcceptInEU = isMexican || isHappy;
+
+    //console.log('Es aceptado en Francia: ', isAcceptInFrance);
+    //console.log('Es aceptado en EU: ', isAcceptInEU);
+
+    //ESTRUCTURA DE CONTROL
+
+    //if(isMexican && isHappy) {
+    //    console.log('Es aceptado en Francia');
+    //} else {
+    //   console.log('No aceptado en Francia');
+    //}
+
+    //OPERADOR FOR 
+    for(
+        var i = 0;
+        i < numeroDiasSemana;
+        i++
+    ) {
+    //console.log('El día actual es: ', diasSemana[i]);
+    }
+
+    // var datosArea = [triangulo1, triangulo2, triangulo3, triangulo4, triangulo5];
+    // var numeroAreas = datosArea.length;
+
+    // for (
+    //     var i = 0; 
+    //     i < numeroAreas;
+    //     i++
+    // ) {
+    //     console.log('El área es: ', datosArea[i]);
+    // }
+
+    var values = [
+        { base: 100, height:200 },
+        { base: 105, height:350 },
+        { base: 3876, height:1984 },
+        { base: 245.34, height:54.12 },
+        { base: 1254.23, height:7463.45 },
+    ];
+
+    var areaValues = [];
+    var ul = document.createElement('ul');
+    for(
+        var i = 0; 
+        i < values.length;  
+        i++
+    ){
+        var currentArea = calcularArea(values[i].base, values[i].height);
+        areaValues.push(currentArea); //push inserta los datos de una variable en otra
+    }
+
+    for(var i = 0; i < areaValues.length; i++) {
+        var li = document.createElement('li');
+        $(li).append(areaValues[i]);
+        $(ul).append(li);
+    }
+    
+    areas.append(ul);
+ 
+    /*
+    Eventos:
+        -click
+        -mouseeneter
+        -mouseleave
+        -scroll
+
+    Método ".on()" de jQuery: Permite escuchar eventos que se descencadenan
+    en un elemento HTML en particualar. 
+    sintaxis: 
+        Recibe 2 parámetros:
+        1. El evento que quiere escuchar. 
+        2. La función anónima que se va a ejectuar cuando suceda el evento
+        en dicho elemento.
+            elementoHTML.on(evento, fn);
+            elementoHTML.evento('click', function() {..code});
+    ó
+
+        Recibe un paramentro: 
+        1. Un objeto con pares (evneto y funcion)
+        
+
+    Método ".css()" de jQuery: Permite modificar estilos de css 
+        sintaxis: 
+            Recibe dos parámetros:
+            1.La propiedad css que se quiere modificar 
+            2.El nuevo valor de dicha propiedad 
+                elementoHTML.css(propiedad, valor);
+                elementoHTML.css('color', '#f00');
+
+        ó
+            Recibe un paramentro
+            1. Un objeto con pares (evneto y funcion)
+
+    
+    Método ".attr()" de jQuery: 
+        1. Si se pasa un solo parámetro, éste parámetro debe ser el nombre de un atributo 
+        del elemento y entonces devolverá el valor de éste atributo. 
+        
+        2. Si se pasan dos parámetros, el primero debe ser el nombre del atributo 
+        que queremos modificar y el segundo el nuevo valor de éste atributo. 
+        Sintaxis:
+            
+            1. elementoHTML.attr('src); -> Esto devolverá el valor del atributo "src". 
+
+            2. elemento HTML.attr('src', 'image/001.jpg'); -> Esto cambia el valor 
+                                                    del atributo  "src" por 'image/001.jpg'
+    */
+
+    var myButton = $('#myButton');
+    var myWindow = $(window);
+    // myButton.on('click', function(){
+    //     console.log('Hice click sobre mi botón');
+    // });
+    // myButton.on('mouseenter', function(){
+    //     console.log('Estoy sobre mi botón');
+    // });
+    // myButton.on('mouseleave', function(){
+    //     console.log('Estoy fuera de mi botón');
+    // });
+
+    var macImage = $('#macImage');
+        //console.log(macImage);
+        // var macImageSrc = macImage.attr('src');
+        //console.log(macImageSrc);
+
+    myButton.on({
+        click: function() {
+            macImage.attr('src', 'images/050.jpg');
+        },
+        mouseenter: function() {
+            $(this).css({
+                backgroundColor: '#f00',
+                color: '#ff0',
+            });
+        },
+        mouseleave: function() {
+            $(this).css('background-color', 'lightpink');
+        },
+    });
+
+    myWindow.on('scroll', function() {
+        var positionScroll = $(this).scrollTop();
+        var newSrc = 'images/0' + positionScroll + '.jpg';
+        if (positionScroll <=74) {
+            macImage.attr('src', newSrc);
+        } 
+    });
 });

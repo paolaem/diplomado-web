@@ -29,9 +29,37 @@ ul, ol {
 /* Nav */
 
 /* Main */
-#areas  {
+.areas  {
     border: 1px solid #ccc;
     padding: 20px;
+}
+.my-button {
+    background-color: lightpink;
+    border: none;
+    color:#000;
+    padding: 10px 20px;
+    border-radius: 3px;
+    margin: 10px 0;
+    cursor: pointer;
+    outline: none;
+    transition: all .3s;
+}
+.my-button:hover {
+    background-color: #6a6a6a;
+    color: #ffff;
+}
+.container {
+    margin-top: 400px;
+}
+.page-header {
+    position: fixed;
+    top: 0;
+    left: 35%;
+    right: 35%;
+
+}
+.content-image {
+    margin: 0 auto;
 }
 /* Footer */
 
