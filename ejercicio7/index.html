@@ -129,8 +129,7 @@
                                         <h2>Especies</h2>
                                     </div>
                                     <div class="col col-tb-8">
-                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, cupiditate quasi! Eum at excepturi quae pariatur quisquam provident soluta earum asperiores, iste voluptatibus consectetur sint magnam natus cupiditate aut perferendis voluptatum quis labore. Harum nisi dolorem, id veniam modi corporis impedit animi officiis, praesentium saepe accusantium, reprehenderit cumque dolorum. Excepturi, minima? Sapiente obcaecati esse repudiandae, cum eaque ratione nesciunt est ea neque quaerat? Cum explicabo est vel possimus! Mollitia velit reiciendis a tempore aliquam amet similique cumque molestiae iusto voluptatibus pariatur ab eos eaque natus unde vitae, ut modi consequuntur, necessitatibus adipisci ratione incidunt rem in! Vero facere corrupti aperiam!</p>
-                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem exercitationem cupiditate ex? Laudantium corrupti est at corporis facilis eligendi odit quia cum dolor velit delectus, ratione odio numquam excepturi et? Explicabo dignissimos officia, tempore amet eos cupiditate itaque ab hic error deserunt consectetur assumenda facilis. Maxime non incidunt tempore culpa ducimus expedita obcaecati molestias, aliquam illo veniam rem beatae ipsa dolorum suscipit saepe reprehenderit facilis voluptate dolorem fugiat architecto perferendis nisi odit! Alias nihil sunt iste inventore officia totam perspiciatis facilis fugit. Magnam minus temporibus, amet maiores vitae fugit autem velit recusandae eius ad veritatis soluta nulla, asperiores perferendis magni!</p>
+                                        <div id="cardContent"></div>
                                     </div>
                             </div>
                     </div>
@@ -169,10 +168,41 @@
         </footer>
     </div>
     <div id="js">
+        <script src="js/lib/handlebars-v4.0.11.js"></script>
         <script src="js/lib/jquery-3.3.1.min.js"></script>
         <script src="js/plugins/jquery.sticky.js"></script>
         <script src="js/plugins/jquery.flexslider-min.js"></script>
         <script src="js/main.js"></script>
     </div>
+    <script id="cardTemplate" type="text/x-handlebars-template">
+        <div id= "cardCurrentMatch" class="card-current-match">
+                <div class="card-current-match__header">
+                    <h3>Jugando en este momento</h3>
+                    <span>Tiempo transcurrido: <strong>{{time}}</strong></span>
+                </div>
+                <div class="card-current-match__content">
+                    <div class="grid">
+                        <div class="col col-tb-6">
+                            <h4>{{home_team.country}}</h4>
+                            <ul class="card-current-match__list">
+                                <li>Goles: <strong>{{home_team.goals}}</strong></li>
+                                <li>Tarjetas amarillas: <strong>{{home_team_statistics.yellow_cards}}</strong></li>
+                                <li>Tarjetas rojas: <strong>{{home_team_statistics.red_cards}}</strong></li>
+                                <li>Penales: <strong>{{home_team.penalties}}</strong></li>
+                            </ul>
+                        </div>
+                        <div class="col col-tb-6">
+                                <h4>{{away_team.country}}</h4>
+                                <ul class="card-current-match__list">
+                                    <li>Goles: <strong>{{away_team.goals}}</strong></li>
+                                    <li>Tarjetas amarillas: <strong>{{away_team_statistics.yellow_cards}}</strong></li>
+                                    <li>Tarjetas rojas: <strong>{{away_team_statistics.red_cards}}</strong></li>
+                                    <li>Penales: <strong>{{away_team.penalties}}</strong></li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </script>
 </body>
 </html>

@@ -148,6 +148,31 @@ figure {
     text-align: center;
     border-top: 1px solid #f2f2f2;
 }
+
+/* Card current match*/
+.card-current-match {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.card-current-match__header, 
+.card-current-match__content {
+    padding: 25px;
+}
+.card-current-match__header {
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+}
+.card-current-match__header h3{
+    margin: 0; 
+    font-size: 30px;
+    font-weight: 400;
+    color: #738161;
+}
+.card-current-match__list li {
+    margin-bottom: 5px;
+
+}
+
 /* Button */ 
 .btn {
     display: inline-block;
@@ -192,3 +217,50 @@ figure {
     overflow: hidden;
     opacity: 0;
 }
+
+.hide {
+    display: none;
+}
+
+.loading { 
+    position: relative;
+}
+
+.loading:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.loading:after {
+    content: "";
+    display: block;
+    width: 46px;
+    height: 46px;
+    border: 5px solid transparent;
+    border-top-color: #666;
+    border-bottom-color: #666;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -23px;
+    margin-left: -23px;
+    border-radius: 50%;
+    animation: loading 1.2s linear infinite;
+}
+
+
+  @keyframes loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
