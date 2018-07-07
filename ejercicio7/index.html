@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Template</title>
+    <link rel="stylesheet" href="css/plugins/lightbox.min.css" />
     <link rel="stylesheet" href="css/main.css" />
     
 </head>
@@ -141,8 +142,55 @@
                                             <h2>Curiosidades</h2>
                                         </div>
                                         <div class="col col-tb-8">
-                                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, cupiditate quasi! Eum at excepturi quae pariatur quisquam provident soluta earum asperiores, iste voluptatibus consectetur sint magnam natus cupiditate aut perferendis voluptatum quis labore. Harum nisi dolorem, id veniam modi corporis impedit animi officiis, praesentium saepe accusantium, reprehenderit cumque dolorum. Excepturi, minima? Sapiente obcaecati esse repudiandae, cum eaque ratione nesciunt est ea neque quaerat? Cum explicabo est vel possimus! Mollitia velit reiciendis a tempore aliquam amet similique cumque molestiae iusto voluptatibus pariatur ab eos eaque natus unde vitae, ut modi consequuntur, necessitatibus adipisci ratione incidunt rem in! Vero facere corrupti aperiam!</p>
-                                            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem exercitationem cupiditate ex? Laudantium corrupti est at corporis facilis eligendi odit quia cum dolor velit delectus, ratione odio numquam excepturi et? Explicabo dignissimos officia, tempore amet eos cupiditate itaque ab hic error deserunt consectetur assumenda facilis. Maxime non incidunt tempore culpa ducimus expedita obcaecati molestias, aliquam illo veniam rem beatae ipsa dolorum suscipit saepe reprehenderit facilis voluptate dolorem fugiat architecto perferendis nisi odit! Alias nihil sunt iste inventore officia totam perspiciatis facilis fugit. Magnam minus temporibus, amet maiores vitae fugit autem velit recusandae eius ad veritatis soluta nulla, asperiores perferendis magni!</p>
+                                            <table class="table">
+                                                <caption>Grupo A</caption>
+                                                <thead>
+                                                    <tr>
+                                                        <th>Equipo</th>
+                                                        <th>Juegos Jugados</th>
+                                                        <th>Juegos Ganados</th>
+                                                        <th>Juegos Perdidos</th>
+                                                        <th>Juegos Empatados</th>
+                                                        <th>Puntos</th>
+                                                    </tr>
+                                                </thead>
+                                                <tfoot>
+                                                    <tr>
+                                                        <th colspan="5">Total Puntos</th>
+                                                        <td>20</td>
+                                                    </tr>
+                                                </tfoot>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Uruguay</td>
+                                                        <td colspan="2">3</td>
+                                                        <td>0</td>
+                                                        <td>0</td>
+                                                        <td>9</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Rusia</td>
+                                                        <td>3</td>
+                                                        <td>2</td>
+                                                        <td>1</td>
+                                                        <td>0</td>
+                                                        <td>6</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Arabia Saudita</td>
+                                                        <td rowspan="2">3</td>
+                                                        <td>1</td>
+                                                        <td colspan="2" rowspan="2">2</td>
+                                                        <td>3</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Egipto</td>
+                                                        <td>0</td>
+                                                        <td>0</td>
+                                                    </tr>
+                                                </tbody>
+                                               
+                                            </table>
                                         </div>
                                 </div>
                         </div>
@@ -151,15 +199,101 @@
                             <div class="container">
                                     <div class="grid">
                                             <div class="col col-tb-4">
-                                                <h2>Comprar</h2>
+                                                <h2>Galería</h2>
                                             </div>
                                             <div class="col col-tb-8">
-                                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, cupiditate quasi! Eum at excepturi quae pariatur quisquam provident soluta earum asperiores, iste voluptatibus consectetur sint magnam natus cupiditate aut perferendis voluptatum quis labore. Harum nisi dolorem, id veniam modi corporis impedit animi officiis, praesentium saepe accusantium, reprehenderit cumque dolorum. Excepturi, minima? Sapiente obcaecati esse repudiandae, cum eaque ratione nesciunt est ea neque quaerat? Cum explicabo est vel possimus! Mollitia velit reiciendis a tempore aliquam amet similique cumque molestiae iusto voluptatibus pariatur ab eos eaque natus unde vitae, ut modi consequuntur, necessitatibus adipisci ratione incidunt rem in! Vero facere corrupti aperiam!</p>
-                                                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem exercitationem cupiditate ex? Laudantium corrupti est at corporis facilis eligendi odit quia cum dolor velit delectus, ratione odio numquam excepturi et? Explicabo dignissimos officia, tempore amet eos cupiditate itaque ab hic error deserunt consectetur assumenda facilis. Maxime non incidunt tempore culpa ducimus expedita obcaecati molestias, aliquam illo veniam rem beatae ipsa dolorum suscipit saepe reprehenderit facilis voluptate dolorem fugiat architecto perferendis nisi odit! Alias nihil sunt iste inventore officia totam perspiciatis facilis fugit. Magnam minus temporibus, amet maiores vitae fugit autem velit recusandae eius ad veritatis soluta nulla, asperiores perferendis magni!</p>
+                                                <ul class="gallery">
+                                                    <li class="gallery__item">
+                                                        <a 
+                                                            href="images/6x4-1.jpg" 
+                                                            data-lightbox="gallery-1" 
+                                                            data-title="Hola" data-alt="plantas">
+                                                            <img src="images/6x4-1.jpg" alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li class="gallery__item">
+                                                        <a 
+                                                            href="images/6x4-2.jpg" 
+                                                            data-lightbox="gallery-1" 
+                                                            data-title="Hola" data-alt="plantas">
+                                                            <img src="images/6x4-2.jpg" alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li class="gallery__item">
+                                                        <a 
+                                                            href="images/6x4-3.jpg" 
+                                                            data-lightbox="gallery-1" 
+                                                            data-title="Hola" data-alt="plantas">
+                                                            <img src="images/6x4-3.jpg" alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li class="gallery__item">
+                                                        <a 
+                                                            href="images/8x5-1.jpg" 
+                                                            data-lightbox="gallery-1" 
+                                                            data-title="Hola" data-alt="plantas">
+                                                            <img src="images/8x5-1.jpg" alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li class="gallery__item">
+                                                        <a 
+                                                            href="images/8x5-2.jpg" 
+                                                            data-lightbox="gallery-1" 
+                                                            data-title="Hola" data-alt="plantas">
+                                                            <img src="images/8x5-2.jpg" alt="" />
+                                                        </a>
+                                                    </li>
+                                                    <li class="gallery__item">
+                                                        <a 
+                                                            href="images/8x5-3.jpg" 
+                                                            data-lightbox="gallery-1" 
+                                                            data-title="Hola" data-alt="plantas">
+                                                            <img src="images/8x5-3.jpg" alt="" />
+                                                        </a>
+                                                    </li>
+                                                </ul>
                                             </div>
                                     </div>
                             </div>
                         </section>
+
+                        <section class="page-section">
+                                <div class="container">
+                                        <div class="grid">
+                                                <div class="col col-tb-4">
+                                                    <h2>Comprar</h2>
+                                                </div>
+                                                <div class="col col-tb-8">
+                                                    <div class="tabs">
+                                                        <div class="tabs__menu">
+                                                            <div class="tabs__item tabs__item-1 active">Cactáceas</div>
+                                                            <div class="tabs__item tabs__item-2">Agaváceas</div>
+                                                            <div class="tabs__item tabs__item-3">Sempervivum</div>
+                                                            <div class="tabs__item tabs__item-4">Echeveria</div>
+                                                        </div>
+                                                        <div class="tabs__contents">
+                                                            <div class="tabs__content tabs__content-1 active">
+                                                                <h3>Cactus</h3>
+                                                                <p>Los cactus son nativos de las Américas, desde la Patagonia hasta las regiones desérticas de América del Norte. Esta familia, Cactaceae, cuenta con 300 géneros y 2.000 especies. Son plantas resistentes a la sequía y a la pobreza del suelo y el sol rajante pero muy poco resistentes a la humedad excesiva, tanto en el aire como en el suelo.</p>
+                                                            </div>
+                                                            <div class="tabs__content tabs__content-2">
+                                                                <h3>Agaves</h3>
+                                                                <p>Aloe barbadensis y arborensis aloe, son las especies, conocidas popularmente como Aloe vera. Su uso es bastante amplio con muchas propiedades medicinales.</p>
+                                                            </div>
+                                                            <div class="tabs__content tabs__content-3">
+                                                                <h3>Sempervivum</h3>
+                                                                <p>Este es un género botánico de la familia de Crassulaceae, y así el nombre lo dice, sus plantas son de lo mas resistente en el mundo, manteniendose vivas incluso en situaciones muy adversas, colores bellos y brillantes sus hojas.</p>
+                                                            </div>
+                                                            <div class="tabs__content tabs__content-4">
+                                                                <h3>Echeveria</h3>
+                                                                <p>Echeveria es un género botánico de la familia Crassulaceae cuya forma floral decorativa la hace perfecta para macetas o jardín.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                                </div>
+                            </section>
         </main>
         <footer class="page-footer">
             <div class="container">
@@ -172,6 +306,7 @@
         <script src="js/lib/jquery-3.3.1.min.js"></script>
         <script src="js/plugins/jquery.sticky.js"></script>
         <script src="js/plugins/jquery.flexslider-min.js"></script>
+        <script src="js/plugins/lightbox.js"></script>
         <script src="js/main.js"></script>
     </div>
     <script id="cardTemplate" type="text/x-handlebars-template">

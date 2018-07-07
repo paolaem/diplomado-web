@@ -201,6 +201,82 @@ figure {
 .btn--secondary:hover{
     background-color: #738161;
 }
+
+/* Table */
+.table {
+    width: 100%; /*Las tablas no ocupan el 100% de su elemento contenedor, por eso se especifica el ancho*/
+    border-collapse: collapse;
+}
+.table thead {
+    background-color: #738161;
+    color: #fff;
+}
+.table thead th {
+    font-weight: 400;
+    padding: 15px 10px;
+}
+.table caption {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+    text-transform: uppercase;
+}
+.table th,
+.table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Gallery*/
+.gallery__item {
+    display: inline-block;
+    max-width: 200px;
+    margin-bottom: 3px;
+    overflow: hidden; /* Esconde lo que se deborda*/
+}
+.gallery__item:hover img {
+    transition: all .4s;
+    transform: scale(1.1);
+}
+
+/* Tabs */
+.tabs__menu {
+    position: relative; /*No cambia su posición, coloca arriba al elemento*/
+    top: 1px;
+}
+.tabs__menu:before,
+.tabs__menu:after {
+    content: "";
+    display: block;
+}
+.tabs__menu:after {
+    clear: both; 
+}
+
+.tabs__item {
+    float: left;
+    padding: 10px 25px;
+    border: 1px solid #ccc;
+    border-radius: 5px 5px 0 0;
+    background-color: #f2f2f2;
+    cursor: pointer;
+}
+.tabs__item + .tabs__item { /*No se le añade al primero*/
+    margin-left: 2px;
+}
+.tabs__content {
+    display: none; /*Se oculta*/
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 0 0 5px 5px;
+}
+.tabs__item.active {
+    background-color: #fff;
+    border-bottom-color: #fff;
+}
+.tabs__content.active {
+    display: block; /*Se muestra*/
+}
 /* Helpers */
 .clearfix:before,
 .clearfix:after {
