@@ -1,0 +1,150 @@
+@charset "UTF-8";
+
+/* Generals */
+body {
+	margin: 0;
+	font-family: arial;
+	font-size: 14px;
+}
+.container {
+	max-width: 1024px;
+	margin: 0 auto;
+}
+
+/* Header */
+.page-header {
+	position: relative;
+}
+.page-header h1 {
+	margin: 0;
+	font-size: 45px;
+	font-weight: 400;
+	position: absolute;
+	top: 15px;
+	left: 25px;
+	color: #fff;
+	text-shadow: 0 0 10px #666;
+}
+.page-header img {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+/* Nav */
+.page-nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.page-nav li {
+	width: 25%;
+	float: left;
+}
+.page-nav a {
+	display: block;
+	background-color: #333;
+	padding: 10px 0;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	color: #ccc;
+}
+
+/* Main */
+.page-main {
+	padding-bottom: 65px;
+}
+.page-main h2 {
+	font-size: 35px;
+	font-weight: 400;
+	margin: 30px 0;
+}
+.page-main p {
+	line-height: 1.5;
+	margin: 25px 0;
+}
+.page-main img {
+	border: 8px solid #ddd;
+}
+.page-main ul {
+	margin: 30px 0;
+}
+.page-main li {
+	margin-bottom: 10px;
+}
+.page-main li a {
+	color:#BE006E;
+}
+.section-blog,
+.aside-blog {
+	padding-top: 35px;
+}
+.section-blog h2:first-child,
+.aside-blog h3:first-child {
+	margin-top: 0;
+}
+.section-blog {
+	width: 74%;
+	padding-right: 1%;
+	float: left;
+}
+.aside-blog {
+	width: 24%;
+	padding-left: 1%;
+	float: right;
+}
+
+/* Article blog */
+.article-blog {
+	padding: 15px 0 50px;
+	border-top: 1px solid #BE006E;
+}
+.article-blog h3 {
+	margin: 15px 0 5px;
+	font-size: 25px;
+	font-weight: 400;
+}
+.article-blog img {
+	border-width: 4px;
+}
+.article-blog time {
+	display: block;
+	margin: 5px 0;
+	font-size: 12px;
+	color: #999;
+}
+.article-blog small {
+	color: #999;
+}
+.article-blog a {
+	color: #333;
+	text-decoration: none;
+}
+.article-blog a:hover {
+	color: #BE006E;
+}
+.article-blog a:hover img {
+	border-color: #BE006E;
+}
+
+/* Footer */
+.page-footer {
+	background-color: #333;
+	padding: 15px 0;
+	text-align: center;
+	color: #ccc;
+}
+.page-footer p {
+	margin: 0;
+}
+
+/* Helpers*/
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display: block;
+}
+.clearfix:after {
+	clear: both;
+}
