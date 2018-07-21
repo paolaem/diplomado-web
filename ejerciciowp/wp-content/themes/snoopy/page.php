@@ -17,9 +17,23 @@ get_header();
 
 	<main class="page-main">
     	<section class="section">
+
 			<?php if ( have_posts() ) : ?>
-				<?php while ( have_posts() ) : the_post(); ?>    
+				<?php while ( have_posts() ) : the_post(); ?>                        
+
 					<h2><?php the_title(); ?></h2>
+						<?php if ( has_post_thumbnail() ) : ?>
+							<?php the_post_thumbnail(); ?>
+						<?php else: ?>
+							<img src="<?php bloginfo ('template_url'); ?>/images/default.png" alt="Snoopy">
+						<?php endif; ?>
+					<div class="wp-gallery">
+						<?php 
+							if ( function_exists( 'rl_gallery' ) ) { rl_gallery( '71' ); }
+						?>
+					</div>
+					<div><?php the_content(); ?></div>
+
 				<?php endwhile; ?>
 			<?php endif; ?>
 		</section>

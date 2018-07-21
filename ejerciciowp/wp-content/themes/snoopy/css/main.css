@@ -139,6 +139,22 @@ body {
 	margin: 0;
 }
 
+/* Pagination */
+.pagination {
+	text-align: center;
+}
+
+.pagination a,
+.pagination span {
+	color: #999;
+	text-decoration: none;
+}
+
+.pagination .current {
+	font-weight: 600;
+	color: #666;
+}
+
 /* Helpers*/
 .clearfix:before,
 .clearfix:after {

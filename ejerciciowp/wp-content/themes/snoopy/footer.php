@@ -15,6 +15,8 @@
     	<p>Todos los derechos reservados &copy; | eduMac 2015 | Sergio Pg </p>
     </footer>
 </div>
-
+<div id="js">
+	<?php wp_footer(); ?>
+</div>
 </body>
 </html>

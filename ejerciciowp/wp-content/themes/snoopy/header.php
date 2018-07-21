@@ -28,6 +28,7 @@
         wp_nav_menu(array(
             'theme_location' => 'menu-1',
             'container' => 'nav',
+            'container_id' => 'pageNav',
             'container_class' => 'page-nav',
             'menu_class' => 'clearfix',
         ));
